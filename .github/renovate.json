@@ -13,7 +13,6 @@
   "npm": {
     "minimumReleaseAge": "1 day"
   },
-  "separateMinorPatch": true,
   "baseBranches":[
     "main",
     "/^release-1\\..*/"
@@ -28,6 +27,11 @@
   },
   "packageRules": [  
     {
+      "description": "Disable everything before selectively enabling",
+      "matchPackageNames": ["*"],
+      "enabled": false
+    },    
+    {
       "matchCategories": [
         "python"
       ],
@@ -37,6 +41,7 @@
       "description": "require dashboard approval for all python dependencies due to potential conflicts"
     },
     {
+      "enabled": true,
       "description": "Update non-test Dockerfiles on main and release branches", 
       "matchDatasources": [
         "docker"
@@ -54,6 +59,7 @@
       "automerge": false
     },  
     {
+      "enabled": true,
       "description": "Update Test dockerfile on main only", 
       "matchDatasources": [
         "docker"
@@ -73,6 +79,7 @@
       "automerge": false
     },      
     {
+      "enabled": true,
       "matchDepTypes": [
         "devDependencies"
       ],
@@ -88,6 +95,7 @@
       "automerge": true
     }, 
     {   
+      "enabled": true,
       "matchDepTypes": [
         "devDependencies"
       ],
@@ -100,6 +108,7 @@
       "groupName": "DevDependencies "
     },
     {
+      "enabled": true,
       "matchDepTypes": [
         "dependencies",
         "peerDependencies"
@@ -114,6 +123,7 @@
       ]        
     },
     { 
+      "enabled": true,
       "matchDepTypes": [
         "dependencies",
         "peerDependencies"
@@ -127,6 +137,7 @@
       ]        
     },
     {
+      "enabled": true,
       "extends": [
         "packages:test"
       ],
@@ -142,6 +153,7 @@
       "automerge": true
     },
     {
+      "enabled": true,
       "extends": [
         "packages:test"
       ],
@@ -154,6 +166,7 @@
       "groupName": "Test packages "
     },
     {
+      "enabled": true,
       "extends": [
         "packages:linters"
       ],
@@ -169,6 +182,7 @@
       "automerge": true
     },
     {
+      "enabled": true,
       "extends": [
         "packages:linters"
       ],
@@ -181,6 +195,7 @@
       "groupName": "linters"
     },
     {  
+      "enabled": true,
       "extends": [
         "monorepo:material-ui"
       ],
@@ -195,6 +210,7 @@
       "automerge": true
     },
     {
+      "enabled": true,
       "extends": [
         "monorepo:material-ui"
       ],
@@ -207,6 +223,7 @@
       "groupName": "material-ui"
     },
     { 
+      "enabled": true,
       "extends": [
         "monorepo:react"
       ],
@@ -221,6 +238,7 @@
       "automerge": true
     },
     { 
+      "enabled": true,
       "extends": [
         "monorepo:react"
       ],
@@ -233,6 +251,7 @@
       "groupName": "react"
     },
     {  
+      "enabled": true,
       "extends": [
         "monorepo:emotion"
       ],
@@ -247,6 +266,7 @@
       "automerge": true
     },
     { 
+      "enabled": true,
       "extends": [
         "monorepo:emotion"
       ],
@@ -259,6 +279,7 @@
       "groupName": "emotion"
     },
     { 
+      "enabled": true,
       "matchUpdateTypes": [
         "patch",
         "minor"
@@ -272,6 +293,7 @@
       ]  
     },
     {
+      "enabled": true,
       "matchUpdateTypes": [
         "major"
       ],
@@ -284,6 +306,7 @@
       ]        
     },
     {
+      "enabled": true,
       "extends": [
         "monorepo:opentelemetry-js",
         "monorepo:opentelemetry-js-contrib"
@@ -299,6 +322,7 @@
       "automerge": false      
     },
     { 
+      "enabled": true,
       "extends": [
         "monorepo:opentelemetry-js",
         "monorepo:opentelemetry-js-contrib"
