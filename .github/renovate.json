@@ -27,8 +27,11 @@
   },
   "packageRules": [  
     {
-      "description": "Disable everything before selectively enabling",
+      "description": "disable renovate in release branches",
       "matchPackageNames": ["*"],
+      "matchBaseBranches": [
+        "/^release-1\\..*/"
+      ],  
       "enabled": false
     },    
     {
