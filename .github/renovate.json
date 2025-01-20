@@ -1,0 +1,343 @@
+{
+  "extends": [
+    "config:js-app",
+    ":gitSignOff",
+    ":rebaseStalePrs",
+    "group:allNonMajor",
+    "default:pinDigestsDisabled",
+    ":automergeBranch"
+  ],
+  "labels": [
+    "kind/dependency upgrade"
+  ],
+  "npm": {
+    "minimumReleaseAge": "1 day"
+  },
+  "baseBranches":[
+    "main",
+    "/^release-1\\..*/"
+  ],  
+  "pip_requirements": {
+    "fileMatch": [
+      "requirements.*\\.in"
+    ]
+  },
+  "major": {
+    "dependencyDashboardApproval": true
+  },
+  "packageRules": [  
+    {
+      "matchCategories": [
+        "python"
+      ],
+      "groupName": "python  ",
+      "additionalBranchPrefix": "python ",
+      "dependencyDashboardApproval": true,
+      "description": "require dashboard approval for all python dependencies due to potential conflicts"
+    },
+    {
+      "description": "Update non-test Dockerfiles on main and release branches", 
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],    
+      "matchBaseBranches": [
+        "main",
+        "/^release-1\\..*/"
+      ],     
+      "additionalBranchPrefix": "dockerfile ",        
+      "groupName": "non-major image updates",
+      "automerge": false
+    },  
+    {
+      "description": "Update Test dockerfile on main only", 
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],      
+      "matchFileNames": [
+        ".ibm/images/Dockerfile"
+      ],    
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "additionalBranchPrefix": "test-dockerfile ",        
+      "groupName": "All Test dockerfile patch image updates",
+      "automerge": false
+    },      
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "DevDependencies ",
+      "automerge": true
+    }, 
+    {   
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "groupName": "DevDependencies "
+    },
+    {
+      "matchDepTypes": [
+        "dependencies",
+        "peerDependencies"
+      ],
+      "groupName": "Dependencies",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ]        
+    },
+    { 
+      "matchDepTypes": [
+        "dependencies",
+        "peerDependencies"
+      ],
+      "groupName": "Dependencies",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ]        
+    },
+    {
+      "extends": [
+        "packages:test"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "Test packages (non-major)",
+      "automerge": true
+    },
+    {
+      "extends": [
+        "packages:test"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "groupName": "Test packages "
+    },
+    {
+      "extends": [
+        "packages:linters"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "linters  (non-major)",
+      "automerge": true
+    },
+    {
+      "extends": [
+        "packages:linters"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "groupName": "linters"
+    },
+    {  
+      "extends": [
+        "monorepo:material-ui"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "groupName": "material-ui (non-major)",
+      "automerge": true
+    },
+    {
+      "extends": [
+        "monorepo:material-ui"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "groupName": "material-ui"
+    },
+    { 
+      "extends": [
+        "monorepo:react"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "groupName": "react (non-major)",
+      "automerge": true
+    },
+    { 
+      "extends": [
+        "monorepo:react"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "groupName": "react"
+    },
+    {  
+      "extends": [
+        "monorepo:emotion"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "groupName": "emotion (non-major)",
+      "automerge": true
+    },
+    { 
+      "extends": [
+        "monorepo:emotion"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],        
+      "groupName": "emotion"
+    },
+    { 
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "types (non-major)",
+      "matchPackageNames": [
+        "@types/{/,}**"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ]  
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "types ",
+      "matchPackageNames": [
+        "@types/{/,}**"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ]        
+    },
+    {
+      "extends": [
+        "monorepo:opentelemetry-js",
+        "monorepo:opentelemetry-js-contrib"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],  
+      "groupName": "opentelemetry (non-major)",
+      "automerge": false      
+    },
+    { 
+      "extends": [
+        "monorepo:opentelemetry-js",
+        "monorepo:opentelemetry-js-contrib"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],  
+      "groupName": "opentelemetry",
+      "automerge": false      
+    },
+    {
+      "description": "ignore updates to all backstage updates and 3rd party plugins",
+      "groupName": "Backstage packages",
+      "dependencyDashboardApproval": true,
+      "enabled": false,
+      "matchPackageNames": [
+        "/^@backstage//",
+        "/^@backstage-community//",
+        "/^@janus-idp//",
+        "/^@immobiliarelabs//",
+        "/^@roadiehq//",
+        "/^@pagerduty//",
+        "/^@internal//"
+      ]
+    }
+  ],
+  "ignorePaths": [
+    "**/dist-dynamic/**"
+  ],
+  "ignoreDeps": [
+    "@roadiehq/backstage-plugin-argo-cd"
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "addLabels": [
+      "kind/security"
+    ]
+  },
+  "osvVulnerabilityAlerts": true
+}
