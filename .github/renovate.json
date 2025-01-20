@@ -27,12 +27,11 @@
   },
   "packageRules": [  
     {
-      "description": "disable renovate in release branches",
-      "matchPackageNames": ["*"],
+      "description": "dependency dashboard approve release branches",
       "matchBaseBranches": [
         "/^release-1\\..*/"
       ],  
-      "enabled": false
+      "dependencyDashboardApproval": true
     },    
     {
       "matchCategories": [
