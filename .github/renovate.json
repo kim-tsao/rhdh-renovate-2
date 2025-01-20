@@ -13,6 +13,7 @@
   "npm": {
     "minimumReleaseAge": "1 day"
   },
+  "separateMinorPatch": true,
   "baseBranches":[
     "main",
     "/^release-1\\..*/"
