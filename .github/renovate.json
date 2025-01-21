@@ -45,7 +45,7 @@
       "matchDatasources": [
         "docker"
       ],
-      "matchDepNames": ["/^docker/dockerfile:*"],
+      "matchUpdateTypes": ["syntax"],
       "enabled": false
 
     }, 
