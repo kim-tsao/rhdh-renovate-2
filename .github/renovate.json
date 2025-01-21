@@ -41,15 +41,6 @@
       }
     },   
     {
-      "description": "disable updating example dockerfile",
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchUpdateTypes": ["syntax"],
-      "enabled": false
-
-    }, 
-    {
       "description": "Dockerfile non-major updates", 
       "matchDatasources": [
         "docker"
