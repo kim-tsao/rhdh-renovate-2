@@ -12,7 +12,7 @@
   ],
   "npm": {
     "minimumReleaseAge": "1 day"
-  }, 
+  },
   "pip_requirements": {
     "fileMatch": [
       "requirements.*\\.in"
@@ -67,19 +67,30 @@
       "matchUpdateTypes": [
         "patch",
         "minor"
-      ],      
+      ],
       "matchCurrentVersion": "!/^0/",
-      "groupName": "DevDependencies ",
+      "groupName": "DevDependencies (non-major)",
       "automerge": true
-    }, 
-    {   
+    },
+    {
       "matchDepTypes": [
         "devDependencies"
       ],
       "matchUpdateTypes": [
         "major"
-      ],        
+      ],
       "groupName": "DevDependencies "
+    },
+    {
+      "matchDepTypes": [
+        "dependencies",
+        "peerDependencies"
+      ],
+      "groupName": "Dependencies (non-major)",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
     },
     {
       "matchDepTypes": [
@@ -88,19 +99,8 @@
       ],
       "groupName": "Dependencies",
       "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ]      
-    },
-    { 
-      "matchDepTypes": [
-        "dependencies",
-        "peerDependencies"
-      ],
-      "groupName": "Dependencies",
-      "matchUpdateTypes": [
         "major"
-      ]       
+      ]
     },
     {
       "extends": [
@@ -109,7 +109,7 @@
       "matchUpdateTypes": [
         "patch",
         "minor"
-      ],      
+      ],
       "matchCurrentVersion": "!/^0/",
       "groupName": "Test packages (non-major)",
       "automerge": true
@@ -120,7 +120,7 @@
       ],
       "matchUpdateTypes": [
         "major"
-      ],        
+      ],
       "groupName": "Test packages "
     },
     {
@@ -130,7 +130,7 @@
       "matchUpdateTypes": [
         "patch",
         "minor"
-      ],      
+      ],
       "matchCurrentVersion": "!/^0/",
       "groupName": "linters  (non-major)",
       "automerge": true
@@ -141,17 +141,17 @@
       ],
       "matchUpdateTypes": [
         "major"
-      ],      
+      ],
       "groupName": "linters"
     },
-    {  
+    {
       "extends": [
         "monorepo:material-ui"
       ],
       "matchUpdateTypes": [
         "patch",
         "minor"
-      ],       
+      ],
       "groupName": "material-ui (non-major)",
       "automerge": true
     },
@@ -161,50 +161,50 @@
       ],
       "matchUpdateTypes": [
         "major"
-      ],      
+      ],
       "groupName": "material-ui"
     },
-    { 
+    {
       "extends": [
         "monorepo:react"
       ],
       "matchUpdateTypes": [
         "patch",
         "minor"
-      ],      
+      ],
       "groupName": "react (non-major)",
       "automerge": true
     },
-    { 
+    {
       "extends": [
         "monorepo:react"
       ],
       "matchUpdateTypes": [
         "major"
-      ],      
+      ],
       "groupName": "react"
     },
-    {  
+    {
       "extends": [
         "monorepo:emotion"
       ],
       "matchUpdateTypes": [
         "patch",
         "minor"
-      ],      
+      ],
       "groupName": "emotion (non-major)",
       "automerge": true
     },
-    { 
+    {
       "extends": [
         "monorepo:emotion"
       ],
       "matchUpdateTypes": [
         "major"
-      ],       
+      ],
       "groupName": "emotion"
     },
-    { 
+    {
       "matchUpdateTypes": [
         "patch",
         "minor"
@@ -221,7 +221,7 @@
       "groupName": "types ",
       "matchPackageNames": [
         "@types/{/,}**"
-      ]      
+      ]
     },
     {
       "extends": [
