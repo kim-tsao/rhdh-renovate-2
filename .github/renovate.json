@@ -39,7 +39,16 @@
       "digest": {
         "enabled": false
       }
-    },    
+    },   
+    {
+      "description": "disable updating example dockerfile",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchDepNames": ["/^docker/dockerfile:*"],
+      "enabled": false
+
+    }, 
     {
       "description": "Dockerfile non-major updates", 
       "matchDatasources": [
