@@ -84,12 +84,21 @@
         "dependencies",
         "peerDependencies"
       ],
-      "groupName": "Dependencies (non-major)",
+      "groupName": "Dependencies (patch)",
       "matchUpdateTypes": [
-        "minor",
         "patch"
       ]
     },
+    {
+      "matchDepTypes": [
+        "dependencies",
+        "peerDependencies"
+      ],
+      "groupName": "Dependencies (minor)",
+      "matchUpdateTypes": [
+        "minor"
+      ]
+    },    
     {
       "matchDepTypes": [
         "dependencies",
@@ -223,27 +232,55 @@
     },
     {
       "extends": [
-        "monorepo:opentelemetry-js",
+        "monorepo:opentelemetry-js"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],  
+      "groupName": "opentelemetry-js (non-major)",
+      "automerge": false      
+    },
+    { 
+      "extends": [
+        "monorepo:opentelemetry-js"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ], 
+      "groupName": "opentelemetry-js",
+      "automerge": false      
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "types ",
+      "matchPackageNames": [
+        "@types/{/,}**"
+      ]
+    },
+    {
+      "extends": [
         "monorepo:opentelemetry-js-contrib"
       ],
       "matchUpdateTypes": [
         "patch",
         "minor"
       ],  
-      "groupName": "opentelemetry (non-major)",
+      "groupName": "opentelemetry-js-contrib (non-major)",
       "automerge": false      
     },
     { 
       "extends": [
-        "monorepo:opentelemetry-js",
         "monorepo:opentelemetry-js-contrib"
       ],
       "matchUpdateTypes": [
         "major"
       ], 
-      "groupName": "opentelemetry",
+      "groupName": "opentelemetry-js-contrib",
       "automerge": false      
-    },
+    },    
     {
       "description": "ignore updates to all backstage updates and 3rd party plugins",
       "groupName": "Backstage packages",
