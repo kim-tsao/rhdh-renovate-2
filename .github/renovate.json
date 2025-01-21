@@ -32,7 +32,6 @@
       "description": "require dashboard approval for all python dependencies due to potential conflicts"
     },
     {
-      "description": "Update non-test Dockerfiles on main and release branches", 
       "matchDatasources": [
         "docker"
       ],
@@ -41,11 +40,10 @@
         "minor"
       ],      
       "additionalBranchPrefix": "dockerfile ",        
-      "groupName": "non-major image updates",
+      "groupName": "Dockerfile images (non-major)",
       "automerge": false
     },  
     {
-      "description": "Update Test dockerfile on main only", 
       "matchDatasources": [
         "docker"
       ],
@@ -57,7 +55,7 @@
         ".ibm/images/Dockerfile"
       ],         
       "additionalBranchPrefix": "test-dockerfile ",        
-      "groupName": "All Test dockerfile patch image updates",
+      "groupName": "Test dockerfile images (non-major)",
       "automerge": false
     },      
     {
@@ -90,7 +88,8 @@
       "matchUpdateTypes": [
         "minor",
         "patch"
-      ]
+      ],
+      "separateMinorPatch": true
     },
     {
       "matchDepTypes": [
@@ -112,6 +111,7 @@
       ],
       "matchCurrentVersion": "!/^0/",
       "groupName": "Test packages (non-major)",
+      "separateMinorPatch": true,
       "automerge": true
     },
     {
@@ -133,6 +133,7 @@
       ],
       "matchCurrentVersion": "!/^0/",
       "groupName": "linters  (non-major)",
+      "separateMinorPatch": true,
       "automerge": true
     },
     {
@@ -152,6 +153,7 @@
         "patch",
         "minor"
       ],
+      "separateMinorPatch": true,
       "groupName": "material-ui (non-major)",
       "automerge": true
     },
@@ -172,6 +174,7 @@
         "patch",
         "minor"
       ],
+      "separateMinorPatch": true,
       "groupName": "react (non-major)",
       "automerge": true
     },
@@ -192,6 +195,7 @@
         "patch",
         "minor"
       ],
+      "separateMinorPatch": true,
       "groupName": "emotion (non-major)",
       "automerge": true
     },
@@ -209,6 +213,7 @@
         "patch",
         "minor"
       ],
+      "separateMinorPatch": true,
       "groupName": "types (non-major)",
       "matchPackageNames": [
         "@types/{/,}**"
@@ -232,6 +237,7 @@
         "patch",
         "minor"
       ],  
+      "separateMinorPatch": true,
       "groupName": "opentelemetry (non-major)",
       "automerge": false      
     },
