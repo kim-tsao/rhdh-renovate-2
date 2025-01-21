@@ -88,8 +88,7 @@
       "matchUpdateTypes": [
         "minor",
         "patch"
-      ],
-      "separateMinorPatch": true
+      ]
     },
     {
       "matchDepTypes": [
@@ -111,7 +110,6 @@
       ],
       "matchCurrentVersion": "!/^0/",
       "groupName": "Test packages (non-major)",
-      "separateMinorPatch": true,
       "automerge": true
     },
     {
@@ -133,7 +131,6 @@
       ],
       "matchCurrentVersion": "!/^0/",
       "groupName": "linters  (non-major)",
-      "separateMinorPatch": true,
       "automerge": true
     },
     {
@@ -153,7 +150,6 @@
         "patch",
         "minor"
       ],
-      "separateMinorPatch": true,
       "groupName": "material-ui (non-major)",
       "automerge": true
     },
@@ -174,7 +170,6 @@
         "patch",
         "minor"
       ],
-      "separateMinorPatch": true,
       "groupName": "react (non-major)",
       "automerge": true
     },
@@ -195,7 +190,6 @@
         "patch",
         "minor"
       ],
-      "separateMinorPatch": true,
       "groupName": "emotion (non-major)",
       "automerge": true
     },
@@ -213,7 +207,6 @@
         "patch",
         "minor"
       ],
-      "separateMinorPatch": true,
       "groupName": "types (non-major)",
       "matchPackageNames": [
         "@types/{/,}**"
@@ -237,7 +230,6 @@
         "patch",
         "minor"
       ],  
-      "separateMinorPatch": true,
       "groupName": "opentelemetry (non-major)",
       "automerge": false      
     },
