@@ -296,6 +296,26 @@
       ]
     },
     {
+      "description": "disable major and minor updates for Winston",
+      "matchPackageName": ["winston"],
+      "enabled": "false",
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ]
+    },
+    {
+      "description": "react-router-dom: group all dependencies",
+      "matchPackageName": ["react-router-dom"],
+      "matchDepTypes": [
+        "dependencies",
+        "peerDependencies",
+        "devDependencies"
+      ],
+      "groupName": "all react-router-dom dependencies", 
+      "additionalBranchPrefix": "react-router-dom "
+    },   
+    {
       "description": "ignore updates to all backstage updates and 3rd party plugins",
       "groupName": "Backstage packages",
       "dependencyDashboardApproval": true,
