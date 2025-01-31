@@ -317,7 +317,7 @@
     },  
     {
       "description": "disable yarn updates",
-      "matchDepName": [
+      "matchDepNames": [
         "yarn"
       ],
       "enabled": "false"
