@@ -316,11 +316,12 @@
       "additionalBranchPrefix": "react-router-dom "
     },  
     {
-      "description": "disable yarn updates",
+      "description": "Keep yarn updates separate",
       "matchDepNames": [
         "yarn"
       ],
-      "enabled": "false"
+      "groupName": "yarn updates",
+      "additionalBranchPrefix": "yarn"
     },        
     {
       "description": "ignore updates to all backstage updates and 3rd party plugins",
