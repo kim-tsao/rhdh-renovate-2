@@ -297,7 +297,7 @@
     },
     {
       "description": "disable major and minor updates for Winston",
-      "matchPackageName": ["winston"],
+      "matchPackageNames": ["winston"],
       "enabled": "false",
       "matchUpdateTypes": [
         "major",
@@ -306,7 +306,7 @@
     },
     {
       "description": "react-router-dom: group all dependencies",
-      "matchPackageName": ["react-router-dom"],
+      "matchPackageNames": ["react-router-dom"],
       "matchDepTypes": [
         "dependencies",
         "peerDependencies",
