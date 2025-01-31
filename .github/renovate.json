@@ -314,7 +314,14 @@
       ],
       "groupName": "all react-router-dom dependencies", 
       "additionalBranchPrefix": "react-router-dom "
-    },   
+    },  
+    {
+      "description": "disable yarn updates",
+      "matchDepName": [
+        "yarn"
+      ],
+      "enabled": "false"
+    },        
     {
       "description": "ignore updates to all backstage updates and 3rd party plugins",
       "groupName": "Backstage packages",
