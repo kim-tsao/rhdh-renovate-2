@@ -316,16 +316,14 @@
         "peerDependencies",
         "devDependencies"
       ],
-      "groupName": "all react-router-dom dependencies",
-      "additionalBranchPrefix": "react-router-dom "
+      "groupName": "all react-router-dom dependencies"
     },
     {
       "description": "Keep yarn updates separate",
       "matchDepNames": [
         "yarn"
       ],
-      "groupName": "yarn updates",
-      "additionalBranchPrefix": "yarn"
+      "groupName": "yarn updates"
     },
     {
       "description": "ignore updates to all backstage updates and 3rd party plugins",
