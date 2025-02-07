@@ -7774,7 +7774,7 @@ __metadata:
     "@mui/material": 5.16.14
     "@testing-library/jest-dom": 6.6.3
     "@testing-library/react": 14.3.1
-    "@testing-library/user-event": 14.5.2
+    "@testing-library/user-event": 14.6.1
     glob: 11.0.1
     msw: 1.3.5
     prettier: 3.4.2
@@ -7832,7 +7832,7 @@ __metadata:
     "@types/mock-fs": 4.13.4
     "@types/supertest": 6.0.2
     express: 4.21.2
-    mock-fs: 5.4.1
+    mock-fs: 5.5.0
     msw: 1.3.5
     node-fetch: 2.7.0
     prettier: 3.4.2
@@ -14163,12 +14163,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:14.5.2":
-  version: 14.5.2
-  resolution: "@testing-library/user-event@npm:14.5.2"
+"@testing-library/user-event@npm:14.6.1":
+  version: 14.6.1
+  resolution: "@testing-library/user-event@npm:14.6.1"
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: d76937dffcf0082fbf3bb89eb2b81a31bf5448048dd61c33928c5f10e33a58e035321d39145cefd469bb5a499c68a5b4086b22f1a44e3e7c7e817dc5f6782867
+  checksum: 4cb8a81fea1fea83a42619e9545137b51636bb7a3182c596bb468e5664f1e4699a275c2d0fb8b6dcc3fe2684f9d87b0637ab7cb4f566051539146872c9141fcb
   languageName: node
   linkType: hard
 
@@ -16151,7 +16151,7 @@ __metadata:
     "@testing-library/jest-dom": 6.6.3
     "@testing-library/react": 14.3.1
     "@testing-library/react-hooks": 8.0.1
-    "@testing-library/user-event": 14.5.2
+    "@testing-library/user-event": 14.6.1
     "@types/node": 20.17.12
     "@types/react": 18.3.18
     "@types/react-dom": 18.3.5
@@ -27464,10 +27464,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mock-fs@npm:5.4.1":
-  version: 5.4.1
-  resolution: "mock-fs@npm:5.4.1"
-  checksum: b46f6e81dc1442aedb5d04244ab4263e0e2629dc8e7694dd1ef7af397a29b7382f588924cbecb0bd403eef8b325c5cf6a01061f92afa4b705d098b24922220dd
+"mock-fs@npm:5.5.0":
+  version: 5.5.0
+  resolution: "mock-fs@npm:5.5.0"
+  checksum: 4712ddaba7cf51c2fb556ff8e4e72828f3606ab8496108ab1d680260789256e6727cb7c13dffa59f4e2987cfef130b97f92f429197c1ac1af705bc8115a007da
   languageName: node
   linkType: hard
 
