@@ -346,7 +346,11 @@
       "enabled": true,
       "matchPackageNames": [
         "@janus-idp/cli"
-      ]
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ]      
     }
   ],
   "ignorePaths": [
