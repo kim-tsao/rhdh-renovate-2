@@ -344,7 +344,7 @@
       "description": "patch and minor updates for janus-idp/cli",
       "groupName": "janus cli updates",
       "matchPackageNames": [
-        "/janus-idp/cli"
+        "/@janus-idp/cli"
       ],
       "matchDepTypes": [
         "dependencies",
