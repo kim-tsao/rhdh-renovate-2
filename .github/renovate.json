@@ -335,7 +335,7 @@
         "/^@backstage-community//",
         "/^@immobiliarelabs//",
         "/^@roadiehq//",
-        "/^janus-idp/(?!cli)//",
+        "/^janus-idp/!/^cli//",
         "/^@pagerduty//",
         "/^@internal//"
       ]
