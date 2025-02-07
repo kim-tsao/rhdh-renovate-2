@@ -339,6 +339,14 @@
         "/^@pagerduty//",
         "/^@internal//"
       ]
+    }, 
+    {
+      "description": "Enabled janus-idp/cli minor/patch updates ",
+      "groupName": "janus-idp cli",
+      "enabled": true,
+      "matchPackageNames": [
+        "@janus-idp/cli"
+      ]
     }
   ],
   "ignorePaths": [
