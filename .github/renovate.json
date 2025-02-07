@@ -333,7 +333,6 @@
       "matchPackageNames": [
         "/^@backstage//",
         "/^@backstage-community//",
-        "/^@janus-idp//",
         "/^@immobiliarelabs//",
         "/^@roadiehq//",
         "/^@pagerduty//",
