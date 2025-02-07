@@ -335,21 +335,10 @@
         "/^@backstage-community//",
         "/^@immobiliarelabs//",
         "/^@roadiehq//",
+        "/^janus-idp/(?!cli)//",
         "/^@pagerduty//",
         "/^@internal//"
       ]
-    }, 
-    {
-      "description": "Enabled janus-idp/cli minor/patch updates ",
-      "groupName": "janus-idp cli",
-      "enabled": true,
-      "matchPackageNames": [
-        "@janus-idp/cli"
-      ],
-      "matchUpdateTypes": [
-        "patch",
-        "minor"
-      ]      
     }
   ],
   "ignorePaths": [
