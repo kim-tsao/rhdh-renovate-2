@@ -378,5 +378,5 @@
       "kind/security"
     ]
   },
-  "osvVulnerabilityAlerts": true
+  "osvVulnerabilityAlerts": false
 }
