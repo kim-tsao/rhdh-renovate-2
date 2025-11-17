@@ -5,7 +5,8 @@
     ":rebaseStalePrs",
     "group:allNonMajor",
     "default:pinDigestsDisabled",
-    ":automergeBranch"
+    ":automergeBranch",
+    ":disableMajorUpdates"      
   ],
   "labels": [
     "kind/dependency upgrade"
