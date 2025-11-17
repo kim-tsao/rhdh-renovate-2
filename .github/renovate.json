@@ -5,8 +5,7 @@
     ":rebaseStalePrs",
     "group:allNonMajor",
     "default:pinDigestsDisabled",
-    ":automergeBranch",
-    ":disableMajorUpdates"      
+    ":automergeBranch"
   ],
   "labels": [
     "kind/dependency upgrade"
@@ -29,6 +28,7 @@
       ],
       "groupName": "python  ",
       "additionalBranchPrefix": "python ",
+      "enabled": false,
       "dependencyDashboardApproval": true,
       "description": "require dashboard approval for all python dependencies due to potential conflicts"
     },
@@ -356,7 +356,15 @@
         "patch",
         "minor"
       ]      
-    }
+    },
+    {
+      "description": "avoid pinning @aws-sdk/util-utf8-browser ",
+      "matchPackageNames": [
+        "@aws-sdk/util-utf8-browser",
+        "@smithy/util-utf8"
+      ],
+      "rangeStrategy": "in-range-only"
+    }    
   ],
   "ignorePaths": [
     "**/dist-dynamic/**"
