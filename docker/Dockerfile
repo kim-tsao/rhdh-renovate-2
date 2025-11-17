@@ -24,7 +24,7 @@
 
 # Stage 1 - Build nodejs skeleton
 # https://registry.access.redhat.com/ubi9/nodejs-20
-FROM registry.access.redhat.com/ubi9/nodejs-20:9.7-1763027372 AS skeleton
+FROM registry.access.redhat.com/ubi9/nodejs-20:9.7-1763396838 AS skeleton
 # hadolint ignore=DL3002
 USER 0
 
@@ -200,7 +200,7 @@ RUN "$YARN" workspaces focus --all --production && \
 
 # Stage 5 - Build the runner image
 # https://registry.access.redhat.com/ubi9/nodejs-20-minimal
-FROM registry.access.redhat.com/ubi9/nodejs-20-minimal:9.7-1763041403 AS runner
+FROM registry.access.redhat.com/ubi9/nodejs-20-minimal:9.7-1763382187 AS runner
 USER 0
 
 # Upstream only
