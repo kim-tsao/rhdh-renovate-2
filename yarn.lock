@@ -14442,7 +14442,7 @@ __metadata:
     prettier: 3.4.2
     react: 18.3.1
     react-router-dom: 6.26.2
-    react-use: 17.5.1
+    react-use: 17.6.0
   peerDependencies:
     react: 16.13.1 || ^17.0.0 || ^18.2.0
     react-router-dom: 6.26.2
@@ -14472,7 +14472,7 @@ __metadata:
     express-promise-router: 4.1.1
     json-2-csv: 5.5.6
     knex: 3.1.0
-    luxon: 3.5.0
+    luxon: 3.7.2
     msw: 1.3.5
     node-fetch: 2.7.0
     prettier: 3.4.2
@@ -20501,9 +20501,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redhat-developer/red-hat-developer-hub-theme@npm:0.4.0":
-  version: 0.4.0
-  resolution: "@redhat-developer/red-hat-developer-hub-theme@npm:0.4.0"
+"@redhat-developer/red-hat-developer-hub-theme@npm:0.5.2":
+  version: 0.5.2
+  resolution: "@redhat-developer/red-hat-developer-hub-theme@npm:0.5.2"
   peerDependencies:
     "@backstage/theme": ^0.5.2
     "@emotion/react": ^11.11.1
@@ -20512,7 +20512,7 @@ __metadata:
     "@material-ui/icons": ^4.11.3
     "@mui/icons-material": ^5.14.19
     "@mui/material": ^5.14.20
-  checksum: 8684f8faa2fe87100dba2c19f1e1a306e808cf98bc65da829c3203a325ea6520a93e54c174e25a220ccf8280ecc2750a178a0d18b12f5ba354c7c415e8a9dc7b
+  checksum: ce0304fc46d5020df6938c7e740fdd9c3f2826bbdc61c2d9d078ae1eeb531ffec640ccc154dba870752ed48bcae4fc7519c0f02ce236a0077065b60e2f716e42
   languageName: node
   linkType: hard
 
@@ -21344,7 +21344,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@scalprum/core@npm:0.8.1, @scalprum/core@npm:^0.8.1":
+"@scalprum/core@npm:0.9.0, @scalprum/core@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "@scalprum/core@npm:0.9.0"
+  dependencies:
+    "@openshift/dynamic-plugin-sdk": ^5.0.1
+    tslib: ^2.6.2
+  checksum: 302d3df87fda872c05a95d8c6b86809f46854f46af8a44b7faa0250de9a0b0ebeaccdcdc69f9767c858fcef2c34c121b3e1087d0781fa1bcd7eee98d244db72b
+  languageName: node
+  linkType: hard
+
+"@scalprum/core@npm:^0.8.1":
   version: 0.8.1
   resolution: "@scalprum/core@npm:0.8.1"
   dependencies:
@@ -21361,6 +21371,20 @@ __metadata:
     "@openshift/dynamic-plugin-sdk": ^5.0.1
     tslib: ^2.6.2
   checksum: 31d1d376c795d47cfc7c4cf84d262989f7a62e3c536aedff03cfa6e23bf969713f70f0e3c9035fe46b280a5133c85c416f1cd2b46c98f9822080ac9d7c752819
+  languageName: node
+  linkType: hard
+
+"@scalprum/react-core@npm:0.11.1":
+  version: 0.11.1
+  resolution: "@scalprum/react-core@npm:0.11.1"
+  dependencies:
+    "@openshift/dynamic-plugin-sdk": ^5.0.1
+    "@scalprum/core": ^0.9.0
+    lodash: ^4.17.0
+  peerDependencies:
+    react: ">=16.8.0 || >=17.0.0 || ^18.0.0"
+    react-dom: ">=16.8.0 || >=17.0.0 || ^18.0.0"
+  checksum: 2eac484690307aa80ebbaf482f7a9d6b756476bfe4da8722a4be05925c32c3fa5ac31614978cc5197598f19afdf6dbc80cc6f13e6f1b00cdb2a03f61ba6b4ed0
   languageName: node
   linkType: hard
 
@@ -27230,9 +27254,9 @@ __metadata:
     "@mui/icons-material": 5.16.14
     "@mui/material": 5.16.14
     "@mui/styled-engine": 5.16.14
-    "@redhat-developer/red-hat-developer-hub-theme": 0.4.0
-    "@scalprum/core": 0.8.1
-    "@scalprum/react-core": 0.9.3
+    "@redhat-developer/red-hat-developer-hub-theme": 0.5.2
+    "@scalprum/core": 0.9.0
+    "@scalprum/react-core": 0.11.1
     "@scalprum/react-test-utils": 0.2.4
     "@testing-library/dom": 9.3.4
     "@testing-library/jest-dom": 6.6.3
@@ -28204,7 +28228,7 @@ __metadata:
     app: "*"
     global-agent: 3.0.0
     prettier: 3.4.2
-    undici: 6.21.2
+    undici: 6.22.0
     winston: 3.14.2
   languageName: unknown
   linkType: soft
@@ -40655,17 +40679,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:3.5.0, luxon@npm:^3.0.0, luxon@npm:^3.2.1":
-  version: 3.5.0
-  resolution: "luxon@npm:3.5.0"
-  checksum: f290fe5788c8e51e748744f05092160d4be12150dca70f9fadc0d233e53d60ce86acd82e7d909a114730a136a77e56f0d3ebac6141bbb82fd310969a4704825b
-  languageName: node
-  linkType: hard
-
-"luxon@npm:^3.4.1, luxon@npm:^3.4.3, luxon@npm:^3.4.4":
+"luxon@npm:3.7.2, luxon@npm:^3.4.1, luxon@npm:^3.4.3, luxon@npm:^3.4.4":
   version: 3.7.2
   resolution: "luxon@npm:3.7.2"
   checksum: fc115fd6a7acc2adb7df3476d20c672beb2985d2a034294282f2c31de8c07f29a15460f5a2b7dd0107797be0dab545ddbc64862662b059fb18c1931a726064f4
+  languageName: node
+  linkType: hard
+
+"luxon@npm:^3.0.0, luxon@npm:^3.2.1":
+  version: 3.5.0
+  resolution: "luxon@npm:3.5.0"
+  checksum: f290fe5788c8e51e748744f05092160d4be12150dca70f9fadc0d233e53d60ce86acd82e7d909a114730a136a77e56f0d3ebac6141bbb82fd310969a4704825b
   languageName: node
   linkType: hard
 
@@ -51885,10 +51909,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:6.21.2":
-  version: 6.21.2
-  resolution: "undici@npm:6.21.2"
-  checksum: 4d7227910bfee0703ea5c5c9d4343bcb2a80d2ce2eb64698b6fb8cc48852e29f7c7c623126161a5073fd594c9040ae7e7ecc8e093fe6e84a9394dd2595754ec5
+"undici@npm:6.22.0":
+  version: 6.22.0
+  resolution: "undici@npm:6.22.0"
+  checksum: ec2d846cb7d360fd45c2e3848bbdadbe086c167be08dd578ed376c70afb2b977950b4c4919c18da0610c61a1ef53c079086d09390a96de2b62bc1fa16d7765f8
   languageName: node
   linkType: hard
 
